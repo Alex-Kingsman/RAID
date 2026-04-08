@@ -4,12 +4,15 @@
 #create RAID
 
 #view HDD
+
 lsblk
 
 #create RAID 6
+
 sudo mdadm --create --verbose /dev/md0 -l 6 -n 5 /dev/sd{b,c,d,e,f}
 
 #control
+
 cat /proc/mdstat
 
 
