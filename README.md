@@ -1,16 +1,15 @@
 Скрипт для создания рейда:
 
-
 #!/bin/sh
-# Create RAID
+#create RAID
 
-#View HDD
+#view HDD
 lsblk
 
-#Create RAID 6
+#create RAID 6
 sudo mdadm --create --verbose /dev/md0 -l 6 -n 5 /dev/sd{b,c,d,e,f}
 
-#Control
+#control
 cat /proc/mdstat
 
 
